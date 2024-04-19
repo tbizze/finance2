@@ -1,5 +1,9 @@
 <?php
 
+use App\Livewire\Settings\PermissionIndex;
+use App\Livewire\Settings\RoleIndex;
+use App\Livewire\Settings\RolePermissionsEdit;
+use App\Livewire\Settings\UserRolesIndex;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -25,4 +29,9 @@ Route::middleware([
     Route::get('/dashboard', function () {
         return view('dashboard');
     })->name('dashboard');
+
+    Route::get('/setting/roles', RoleIndex::class)->name('setting.roles.index');
+    Route::get('/setting/permissions', PermissionIndex::class)->name('setting.permissions.index');
+    Route::get('/setting/role-permissions/{role}/edit', RolePermissionsEdit::class)->name('setting.role-permissions');
+    Route::get('/setting/user-has-roles', UserRolesIndex::class)->name('setting.user-roles.index');    
 });
