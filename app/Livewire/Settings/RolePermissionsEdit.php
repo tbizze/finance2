@@ -4,10 +4,10 @@ namespace App\Livewire\Settings;
 
 use Livewire\Component;
 
-class RolePermissionsIndex extends Component
+class RolePermissionsEdit extends Component
 {
     public function render()
     {
-        return view('livewire.settings.role-permissions-index');
+        return view('livewire.settings.role-permissions-edit');
     }
 }
