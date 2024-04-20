@@ -17,7 +17,13 @@ class PlanoCtaFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            // 'codigo','nome','notas','ativo','mascara','niveis'
+            'codigo' => '4E001',
+            'nome' => $this->faker->sentence(2),
+            'notas' => $this->faker->sentence(3),
+            'ativo' => true,
+            'mascara' => '0.0.00.000',
+            'niveis' => 4,
         ];
     }
 }
