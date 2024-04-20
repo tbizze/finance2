@@ -1,5 +1,6 @@
 <?php
 
+use App\Livewire\DashboardIndex;
 use App\Livewire\Settings\PermissionIndex;
 use App\Livewire\Settings\RoleIndex;
 use App\Livewire\Settings\RolePermissionsEdit;
@@ -26,9 +27,11 @@ Route::middleware([
     config('jetstream.auth_session'),
     'verified',
 ])->group(function () {
-    Route::get('/dashboard', function () {
+    /* Route::get('/dashboard', function () {
         return view('dashboard');
-    })->name('dashboard');
+    })->name('dashboard'); */
+
+    Route::get('/dashboard', DashboardIndex::class)->name('dashboard');
 
     Route::get('/setting/roles', RoleIndex::class)->name('setting.roles.index');
     Route::get('/setting/permissions', PermissionIndex::class)->name('setting.permissions.index');
