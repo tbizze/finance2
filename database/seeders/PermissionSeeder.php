@@ -18,15 +18,15 @@ class PermissionSeeder extends Seeder
         // ----------------------------------------------------------------
         $role1 = Role::create([
             'name' => 'Admin',
-            'description' => 'Usuário super administrador. Acesso total, inclusive administra usuários e permissões.'
+            'description' => 'Função super administrador. Acesso total, inclusive administra usuários e permissões.'
         ]);
         $role2 = Role::create([
             'name' => 'Geral',
-            'description' => 'Usuário com amplos poderes no sistema, com exceção na administração de usuários e permissões.'
+            'description' => 'Função com amplos poderes no sistema, com exceção na administração de usuários e permissões.'
         ]); 
         $role3 = Role::create([
             'name' => 'Basico',
-            'description' => 'Usuário com poucas permissões, apenas consultar.'
+            'description' => 'Usuário com poucas permissões, apenas consultas.'
         ]); 
 
         // PERMISSÕES DA APLICAÇÃO
@@ -80,12 +80,12 @@ class PermissionSeeder extends Seeder
         Permission::create([
             'name'          => 'setting.user-roles.index',
             'description'   => 'Ver funções de usuários',
-            'model'         => 'SEG: Usuário',
+            'model'         => 'SEG: Usuário/Permissão',
         ])->syncRoles([$role1]);
         Permission::create([
             'name'          => 'setting.user-roles.edit',
             'description'   => 'Editar funções de usuários',
-            'model'         => 'SEG: Usuário',
+            'model'         => 'SEG: Usuário/Permissão',
         ])->syncRoles([$role1]);
     }
 }
