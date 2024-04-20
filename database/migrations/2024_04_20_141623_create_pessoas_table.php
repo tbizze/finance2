@@ -13,7 +13,18 @@ return new class extends Migration
     {
         Schema::create('pessoas', function (Blueprint $table) {
             $table->id();
+            $table->string('codigo', 30)->index();
+            $table->string('cpf_cnpj', 14)->unique();
+            $table->string('rg_inscricao', 15)->nullable();
+            $table->string('nome_razao', 150);
+            $table->string('apelido_fantasia')->nullable();
+            $table->boolean('ativo')->default(true);
+            $table->string('notas')->nullable();
+
+            // Data de criação e de edição.
             $table->timestamps();
+            // Recurso SoftDelete = excluir p/ lixeira.
+            $table->softDeletes();
         });
     }
 

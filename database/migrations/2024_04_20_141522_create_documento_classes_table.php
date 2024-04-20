@@ -13,7 +13,15 @@ return new class extends Migration
     {
         Schema::create('documento_classes', function (Blueprint $table) {
             $table->id();
+            $table->string('nome', 40);
+            $table->integer('order');
+            $table->boolean('ativo')->default(true);
+            $table->string('notas')->nullable();
+
+            // Data de criação e de edição.
             $table->timestamps();
+            // Recurso SoftDelete = excluir p/ lixeira.
+            $table->softDeletes();
         });
     }
 
