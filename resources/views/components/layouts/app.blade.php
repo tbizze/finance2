@@ -20,7 +20,7 @@
                 </label>
      
                 {{-- Brand --}}
-                <img src="{{asset('imgs/logo.png')}}" class=" h-14" alt="logo" />
+                <img src="{{asset('imgs/logo-finance.png')}}" class=" h-10" alt="logo" />
             </x-slot:brand>
      
             {{-- Right side actions --}}
