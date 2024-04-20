@@ -68,6 +68,7 @@ class PermissionIndex extends Component
             ->when($this->search, function ($query, $val) {
                 $query->where('name', 'like', '%' . $val . '%');
                 $query->orWhere('description', 'like', '%' . $val . '%');
+                $query->orWhere('model', 'like', '%' . $val . '%');
                 return $query;
             })
             ->orderBy(...array_values($this->sortBy))
