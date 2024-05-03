@@ -1,4 +1,4 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+<p align="center"><a href="https://laravel.com" target="_blank"><img src="img/logo-finance.png" alt="App Gerenciador Financeiro Logo"></a></p>
 
 <p align="center">
 <a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
@@ -7,9 +7,42 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-## About Laravel
+## Sobre o App Gerenciador Financeiro
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+A proposta central é dispor de uma ferramenta como auxílio nas questões financeiras e contábeis de organizações e empresas. O ponto de partida: [PREVISÃO] => Contas a Pagar e Receber // [REALIZADO] => Contas Pagas e Recebidas. 
+
+Deve usar dos recursos tecnológicos do mercado atual, ex.: 
+
+- Disponível em NUVEM, permitindo acesso de qualquer lugar, e análise da situação financeira, de forma instantânea;
+- Controle de acesso por funções, isso permite que usuários tenham formas diferentes de uso da aplicação, tendo permissões ou sendo bloqueado recursos e/ou áreas;
+- Arquivar cópias de documentos em nuvem. Com isso, disponibilizar conferência de documentos (NF, Recibos, etc) diretamente da aplicação, não sendo necessário manusear documentos físicos.
+- Módulo Contador. Com este recurso, escritórios de contabilidade teriam acesso à aplicação, mas de forma diferenciada, somente de recursos e informações que lhe cabem.
+
+Esta aplicação tem como desafio principal, substituir as planilhas Excel muito úteis, mas muitas vezes difíceis de manusear/alimentar. Sem contar que, por ser trabalho todo manual, dá margem para erros. 
+
+Contudo, seu alvo principal é automatizar e sistematizar rotinas, facilitando ações na gerência financeira, evitando erros de quando executadas de forma manual, mas sobretudo agilizando o trabalho do cotidiano.
+
+E, por fim, deve ser flexível e personalizável, no sentido de se adequar a:
+- uma organização/empresa de grande porte, complexa em suas atividades (diversas unidades/filiais, diferentes ramos de atuação, pessoas técnicas na área financeira, etc);
+- mas também a um projeto/organização pequeno, com poucas pessoas e escassos recursos.
+
+## Contas a Pagar/Receber
+
+É entendido como um módulo da aplicação para auxiliar no planejamento financeiro, isto é: 
+- [GESTÃO] de contas a pagar/receber
+- [PREVISÃO] de contas a pagar/receber
+ 
+ Com isso, um recurso bastante útil é o cadastro de contas recorrentes, ex.: água, energia, aluguel, INSS, FGTS, etc.
+ Então no cadastro de contas a pagar/receber, segregar em duas formas: única conta, conta recorrente. E quando recorrente, ela se repetirá, conforme os parâmetros informados no cadastro.
+ 
+ Tipos de recorrência:
+ - parcelamento: como uma compra que foi parcelada, e se finalizará após X repetições;
+ - assinatura: como despesa que será fixa por um período (1 ano, 6 meses, 2 anos, etc). Exemplo aluguel, imposto com funcionário, consumo água/energia.
+
+ ### Cadastro de contas recorrentes
+
+
+
 
 - [Simple, fast routing engine](https://laravel.com/docs/routing).
 - [Powerful dependency injection container](https://laravel.com/docs/container).
@@ -49,18 +82,4 @@ We would like to extend our thanks to the following sponsors for funding Laravel
 - **[byte5](https://byte5.de)**
 - **[OP.GG](https://op.gg)**
 
-## Contributing
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
