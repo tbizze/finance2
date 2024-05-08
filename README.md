@@ -1,4 +1,4 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="img/logo-finance.png" alt="App Gerenciador Financeiro Logo"></a></p>
+<p align="center"><img src="img/logo-finance.png" alt="App Gerenciador Financeiro Logo"></a></p>
 
 <p align="center">
 <a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
@@ -9,48 +9,49 @@
 
 ## Sobre o App Gerenciador Financeiro
 
-A proposta central é dispor de uma ferramenta como auxílio nas questões financeiras e contábeis de organizações e empresas. O ponto de partida: [PREVISÃO] => Contas a Pagar e Receber // [REALIZADO] => Contas Pagas e Recebidas. 
+A proposta central é dispor de uma ferramenta como auxílio nas questões financeiras e contábeis de organizações e empresas. O ponto de partida: **PREVISÃO** => Contas a Pagar e Receber // **REALIZADO** => Contas Pagas e Recebidas.
 
-Deve usar dos recursos tecnológicos do mercado atual, ex.: 
+Deve usar dos recursos tecnológicos do mercado atual, ex.:
 
-- Disponível em NUVEM, permitindo acesso de qualquer lugar, e análise da situação financeira, de forma instantânea;
-- Controle de acesso por funções, isso permite que usuários tenham formas diferentes de uso da aplicação, tendo permissões ou sendo bloqueado recursos e/ou áreas;
-- Arquivar cópias de documentos em nuvem. Com isso, disponibilizar conferência de documentos (NF, Recibos, etc) diretamente da aplicação, não sendo necessário manusear documentos físicos.
-- Módulo Contador. Com este recurso, escritórios de contabilidade teriam acesso à aplicação, mas de forma diferenciada, somente de recursos e informações que lhe cabem.
+-   Disponível em NUVEM, permitindo acesso de qualquer lugar, e análise da situação financeira, de forma instantânea;
+-   Controle de acesso por funções, isso permite que usuários tenham formas diferentes de uso da aplicação, tendo permissões ou sendo bloqueado recursos e/ou áreas;
+-   Arquivar cópias de documentos em nuvem. Com isso, disponibilizar conferência de documentos (NF, Recibos, etc) diretamente da aplicação, não sendo necessário manusear documentos físicos.
+-   Módulo Contador. Com este recurso, escritórios de contabilidade teriam acesso à aplicação, mas de forma diferenciada, somente de recursos e informações que lhe cabem.
 
-Esta aplicação tem como desafio principal, substituir as planilhas Excel muito úteis, mas muitas vezes difíceis de manusear/alimentar. Sem contar que, por ser trabalho todo manual, dá margem para erros. 
+Esta aplicação tem como desafio principal, substituir as planilhas Excel muito úteis, mas muitas vezes difíceis de manusear/alimentar. Sem contar que, por ser trabalho todo manual, dá margem para erros.
 
 Contudo, seu alvo principal é automatizar e sistematizar rotinas, facilitando ações na gerência financeira, evitando erros de quando executadas de forma manual, mas sobretudo agilizando o trabalho do cotidiano.
 
 E, por fim, deve ser flexível e personalizável, no sentido de se adequar a:
-- uma organização/empresa de grande porte, complexa em suas atividades (diversas unidades/filiais, diferentes ramos de atuação, pessoas técnicas na área financeira, etc);
-- mas também a um projeto/organização pequeno, com poucas pessoas e escassos recursos.
+
+-   uma organização/empresa de grande porte, complexa em suas atividades (diversas unidades/filiais, diferentes ramos de atuação, pessoas técnicas na área financeira, etc);
+-   mas também a um projeto/organização pequeno, com poucas pessoas e escassos recursos.
 
 ## Contas a Pagar/Receber
 
-É entendido como um módulo da aplicação para auxiliar no planejamento financeiro, isto é: 
-- [GESTÃO] de contas a pagar/receber
-- [PREVISÃO] de contas a pagar/receber
- 
- Com isso, um recurso bastante útil é o cadastro de contas recorrentes, ex.: água, energia, aluguel, INSS, FGTS, etc.
- Então no cadastro de contas a pagar/receber, segregar em duas formas: única conta, conta recorrente. E quando recorrente, ela se repetirá, conforme os parâmetros informados no cadastro.
- 
- Tipos de recorrência:
- - parcelamento: como uma compra que foi parcelada, e se finalizará após X repetições;
- - assinatura: como despesa que será fixa por um período (1 ano, 6 meses, 2 anos, etc). Exemplo aluguel, imposto com funcionário, consumo água/energia.
+É entendido como um módulo da aplicação para auxiliar no planejamento financeiro, isto é:
 
- ### Cadastro de contas recorrentes
+-   **GESTÃO** de contas a pagar/receber
+-   **PREVISÃO** de contas a pagar/receber
 
+Com isso, um recurso bastante útil é o cadastro de contas recorrentes, ex.: água, energia, aluguel, INSS, FGTS, etc.
 
+Então no cadastro de contas a pagar/receber, segregar em duas formas: única conta, conta recorrente. E quando recorrente, ela se repetirá, conforme os parâmetros informados no cadastro.
 
+**Tipos de recorrência:**
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+-   parcelamento: como uma compra que foi parcelada, e se finalizará após X repetições;
+-   assinatura: como despesa que será fixa por um período (1 ano, 6 meses, 2 anos, etc). Exemplo aluguel, imposto com funcionário, consumo água/energia.
+
+### Cadastro de contas recorrentes
+
+-   [Simple, fast routing engine](https://laravel.com/docs/routing).
+-   [Powerful dependency injection container](https://laravel.com/docs/container).
+-   Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
+-   Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
+-   Database agnostic [schema migrations](https://laravel.com/docs/migrations).
+-   [Robust background job processing](https://laravel.com/docs/queues).
+-   [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
 
 Laravel is accessible, powerful, and provides tools required for large, robust applications.
 
@@ -68,18 +69,16 @@ We would like to extend our thanks to the following sponsors for funding Laravel
 
 ### Premium Partners
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
-
-
+-   **[Vehikl](https://vehikl.com/)**
+-   **[Tighten Co.](https://tighten.co)**
+-   **[WebReinvent](https://webreinvent.com/)**
+-   **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
+-   **[64 Robots](https://64robots.com)**
+-   **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
+-   **[Cyber-Duck](https://cyber-duck.co.uk)**
+-   **[DevSquad](https://devsquad.com/hire-laravel-developers)**
+-   **[Jump24](https://jump24.co.uk)**
+-   **[Redberry](https://redberry.international/laravel/)**
+-   **[Active Logic](https://activelogic.com)**
+-   **[byte5](https://byte5.de)**
+-   **[OP.GG](https://op.gg)**
