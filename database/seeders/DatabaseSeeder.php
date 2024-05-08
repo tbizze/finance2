@@ -32,14 +32,16 @@ class DatabaseSeeder extends Seeder
             PessoaGrupoSeeder::class, 
 
             PlanoCtaSeeder::class,
-            PlanoCtaItemSeeder::class,*/
+            PlanoCtaItemSeeder::class,
 
-            //PessoaSeeder::class,
-            //CtaMovimentoSeeder::class, 
-            
-            //DocumentoSeeder::class,
-            //DocumentoItemSeeder::class,
-            DocumentoBaixaSeeder::class,
+            PessoaSeeder::class,
+            CtaMovimentoSeeder::class,  */
+
+            // DocumentoSeeder::class,
+            // DocumentoItemSeeder::class,
+            // DocumentoBaixaSeeder::class,
+
+            JobcardSeeder::class,
 
         ]);
     }
