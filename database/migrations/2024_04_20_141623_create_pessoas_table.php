@@ -13,8 +13,8 @@ return new class extends Migration
     {
         Schema::create('pessoas', function (Blueprint $table) {
             $table->id();
-            $table->string('codigo', 30)->index();
-            $table->string('cpf_cnpj', 14)->unique();
+            $table->string('codigo', 30)->nullable();
+            $table->string('cpf_cnpj', 14)->nullable();
             $table->string('rg_inscricao', 15)->nullable();
             $table->string('nome_razao', 150);
             $table->string('apelido_fantasia')->nullable();
