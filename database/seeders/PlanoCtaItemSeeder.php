@@ -37,12 +37,71 @@ class PlanoCtaItemSeeder extends Seeder
                 'exibir_dre' => true,
                 'plano_cta_id' => 1,
             ],
+            // mesmo titular
+            [
+                'nome' => 'Transferência',
+                'ativo' => true,
+                'parent' => null,
+                'codigo' => '3',
+                'cod_externo' => null,
+                'natureza' => 'D',
+                'lcto' => false,
+                'exibir_dre' => true,
+                'plano_cta_id' => 1,
+            ],
+            [
+                'nome' => 'Transferência',
+                'ativo' => true,
+                'parent' => 3,
+                'codigo' => '3.1',
+                'cod_externo' => null,
+                'natureza' => 'D',
+                'lcto' => false,
+                'exibir_dre' => true,
+                'plano_cta_id' => 1,
+            ],
+            [
+                'nome' => 'Transferência',
+                'ativo' => true,
+                'parent' => 4,
+                'codigo' => '3.1.1',
+                'cod_externo' => null,
+                'natureza' => 'D',
+                'lcto' => false,
+                'exibir_dre' => true,
+                'plano_cta_id' => 1,
+            ],
+            [
+                'nome' => 'Mov. titular',
+                'ativo' => true,
+                'parent' => 5,
+                'codigo' => '3.1.1.01',
+                'cod_externo' => null,
+                'natureza' => 'D',
+                'lcto' => true,
+                'exibir_dre' => true,
+                'plano_cta_id' => 1,
+            ],
         ];
         foreach ($ctas_principais as $item) {
             PlanoCtaItem::create($item);
         }
 
         //dd('teste');
+        $grupo_debitos = [
+            [
+                'id' => '3.1',
+                'name' => 'Transferência',
+            ],
+            [
+                'id' => '1.2',
+                'name' => 'Operacionais',
+            ],
+            [
+                'id' => '1.3',
+                'name' => 'Adicionais',
+            ],
+        ];
         
         // --------- DADOS CTAS DESPESAS ------------------
         $grupo_debitos = [
@@ -86,6 +145,14 @@ class PlanoCtaItemSeeder extends Seeder
                 'id' => '.3',
                 'name' => 'Atend. Enfermagem',
             ],
+            [
+                'id' => '.4',
+                'name' => 'Bancárias',
+            ],
+            [
+                'id' => '.5',
+                'name' => 'Serviços',
+            ],
         ];
         $grupo_Sub_debitos3 = [
             [
@@ -101,85 +168,101 @@ class PlanoCtaItemSeeder extends Seeder
 
         $lcto_debitos11 = [
             [
-                'id' => '.1',
+                'id' => '.01',
                 'name' => 'Salário',
             ],
             [
-                'id' => '.2',
+                'id' => '.02',
                 'name' => 'Férias',
             ],
             [
-                'id' => '.3',
+                'id' => '.03',
                 'name' => 'Hora Extra',
             ],
         ];
         $lcto_debitos12 = [
             [
-                'id' => '.1',
+                'id' => '.01',
                 'name' => 'FGTS - Matriz',
             ],
             [
-                'id' => '.2',
+                'id' => '.02',
                 'name' => 'INSS Retido - Matriz',
+            ],
+            [
+                'id' => '.03',
+                'name' => 'DARF',
             ],
         ];
         $lcto_debitos13 = [
             [
-                'id' => '.1',
+                'id' => '.01',
                 'name' => 'Atendimento Idosos',
             ],
         ];
         $lcto_debitos21 = [
             [
-                'id' => '.1',
+                'id' => '.01',
                 'name' => 'Carnes',
             ],
             [
-                'id' => '.2',
+                'id' => '.02',
                 'name' => 'Alimentos diversos',
             ],
             [
-                'id' => '.3',
+                'id' => '.03',
                 'name' => 'Padaria',
             ],
         ];
         $lcto_debitos22 = [
             [
-                'id' => '.1',
+                'id' => '.01',
                 'name' => 'Higiene',
             ],
             [
-                'id' => '.2',
+                'id' => '.02',
                 'name' => 'Limpeza',
             ],
         ];
         $lcto_debitos23 = [
             [
-                'id' => '.1',
+                'id' => '.01',
                 'name' => 'Insumos',
             ],
             [
-                'id' => '.2',
+                'id' => '.02',
                 'name' => 'Medicamentos',
+            ],
+        ];
+        $lcto_debitos24 = [
+            [
+                'id' => '.01',
+                'name' => 'Tarifas bancárias',
+            ],
+        ];
+        $lcto_debitos25 = [
+            [
+                'id' => '.01',
+                'name' => 'Estacionamento',
             ],
         ];
         $lcto_debitos31 = [
             [
-                'id' => '.1',
+                'id' => '.01',
                 'name' => 'Aquisição Móv. Eqptos.',
             ],
             [
-                'id' => '.2',
+                'id' => '.02',
                 'name' => 'Aquisição utensílhos',
             ],
         ];
         $lcto_debitos32 = [
             [
-                'id' => '.1',
+                'id' => '.01',
                 'name' => 'Manut. Autom. - mão obra',
             ],
             [
-                'id' => '.2',
+                'id' => '.02',
                 'name' => 'Manut. Predial - mão obra',
             ],
         ];
@@ -335,6 +418,40 @@ class PlanoCtaItemSeeder extends Seeder
                             PlanoCtaItem::create($dados);
                         }
                     }
+                    if ($item_sub['id'] == '.4'){
+                        foreach ($lcto_debitos24 as $item_sub_lcto) {
+                            $dados = [
+                                'nome' => $item_sub_lcto['name'],
+                                //'notas' => $this->faker->sentence(3),
+                                'ativo' => true,
+                                'parent' => $record_sub->id,
+                                'codigo' => $record_sub->codigo . $item_sub_lcto['id'],
+                                'cod_externo' => null,
+                                'natureza' => 'D',
+                                'lcto' => true,
+                                'exibir_dre' => true,
+                                'plano_cta_id' => 1,
+                            ];
+                            PlanoCtaItem::create($dados);
+                        }
+                    }
+                    if ($item_sub['id'] == '.5'){
+                        foreach ($lcto_debitos25 as $item_sub_lcto) {
+                            $dados = [
+                                'nome' => $item_sub_lcto['name'],
+                                //'notas' => $this->faker->sentence(3),
+                                'ativo' => true,
+                                'parent' => $record_sub->id,
+                                'codigo' => $record_sub->codigo . $item_sub_lcto['id'],
+                                'cod_externo' => null,
+                                'natureza' => 'D',
+                                'lcto' => true,
+                                'exibir_dre' => true,
+                                'plano_cta_id' => 1,
+                            ];
+                            PlanoCtaItem::create($dados);
+                        }
+                    }
                 }
             }
             if ($grupo_debito['id'] == '1.3'){
@@ -439,49 +556,49 @@ class PlanoCtaItemSeeder extends Seeder
         
         $lcto_credito11 = [
             [
-                'id' => '.1',
+                'id' => '.01',
                 'name' => 'Doação familiar 70%',
             ],
             [
-                'id' => '.2',
+                'id' => '.02',
                 'name' => 'Doação familiar 13º',
             ],
         ];
         $lcto_credito12 = [
             [
-                'id' => '.1',
+                'id' => '.01',
                 'name' => 'Receitas c/ bazar',
             ],
             [
-                'id' => '.2',
+                'id' => '.02',
                 'name' => 'Receitas c/ eventos',
             ],
         ];
         $lcto_credito13 = [
             [
-                'id' => '.1',
+                'id' => '.01',
                 'name' => 'Doações regulares',
             ],
             [
-                'id' => '.2',
+                'id' => '.02',
                 'name' => 'Doação hortifruti',
             ],
         ];
         $lcto_credito21 = [
             [
-                'id' => '.1',
+                'id' => '.01',
                 'name' => 'Crédito NF Paulista',
             ],
         ];
         $lcto_credito22 = [
             [
-                'id' => '.1',
+                'id' => '.01',
                 'name' => 'Rendimentos aplicações',
             ],
         ];
         $lcto_credito31 = [
             [
-                'id' => '.1',
+                'id' => '.01',
                 'name' => 'Repasses de filiais',
             ],
         ];

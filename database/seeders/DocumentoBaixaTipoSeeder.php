@@ -41,11 +41,7 @@ class DocumentoBaixaTipoSeeder extends Seeder
                 'natureza' => 'C',
                 'notas' => 'Recebimento em cartão.'
             ],
-            [
-                'nome' => 'Guia receita federal',
-                'natureza' => 'C',
-                'notas' => 'Abrangência CDP.'
-            ],
+            
             // --- DESPESAS
             [
                 'nome' => 'Espécie',
@@ -66,6 +62,11 @@ class DocumentoBaixaTipoSeeder extends Seeder
                 'nome' => 'Internet Banking',
                 'natureza' => 'D',
                 'notas' => 'Pagamento em banco digital.'
+            ],
+            [
+                'nome' => 'Débito em cta.',
+                'natureza' => 'D',
+                'notas' => 'Pagamento debitado direto na conta.'
             ],
         ];
 

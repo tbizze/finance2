@@ -16,19 +16,19 @@ class DocumentoClasseSeeder extends Seeder
         //
         $items = [
             [
-                'nome' => 'NFe',
+                'nome' => 'NFS-e',
                 'order' => 1,
-                'notas' => 'Nota fiscal paulista.'
-            ],
-            [
-                'nome' => 'NFs',
-                'order' => 2,
                 'notas' => 'Nota fiscal de serviço eletrônica.'
             ],
             [
-                'nome' => 'NF danf',
+                'nome' => 'NF-e',
+                'order' => 2,
+                'notas' => 'Nota fiscal de produtos e mercadorias eletrônica.'
+            ],
+            [
+                'nome' => 'Cupom Fiscal',
                 'order' => 3,
-                'notas' => 'Nota fiscal eletrônica.'
+                'notas' => 'Nota fiscal paulista.'
             ],
             [
                 'nome' => 'RPA',
@@ -49,6 +49,31 @@ class DocumentoClasseSeeder extends Seeder
                 'nome' => 'DARF',
                 'order' => 7,
                 'notas' => 'Guia p/ pgto. DARF.'
+            ],
+            [
+                'nome' => 'Holerite/TRCT',
+                'order' => 8,
+                'notas' => 'Holerite e Termo Rescisão Contrato.'
+            ],
+            [
+                'nome' => 'Tar. Banco',
+                'order' => 9,
+                'notas' => 'Taxas do banco debitadas na conta.'
+            ],
+            [
+                'nome' => 'Recibo',
+                'order' => 10,
+                'notas' => 'Recibos NÃO FISCAIS.'
+            ],
+            [
+                'nome' => 'Recibo receitas',
+                'order' => 11,
+                'notas' => 'Recibos ref. doações e contribuições recebidas.'
+            ],
+            [
+                'nome' => 'Mov. Titular',
+                'order' => 12,
+                'notas' => 'Trans. entre contas mesmo titular.'
             ],
         ];
 
