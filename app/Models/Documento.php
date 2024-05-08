@@ -33,6 +33,31 @@ class Documento extends Model
         'data_venc' => 'date:d/m/Y',
     ];
 
+    public function scopeTpAPagar($query)
+    {
+        return $query->where('documento_tipo_id', '1');
+    }
+    public function scopeTpAReceber($query)
+    {
+        return $query->where('documento_tipo_id', '2');
+    }
+    public function scopeTpPago($query)
+    {
+        return $query->where('documento_tipo_id', '3');
+    }
+    public function scopeTpRecebido($query)
+    {
+        return $query->where('documento_tipo_id', '4');
+    }
+    public function scopeTpTarifa($query)
+    {
+        return $query->where('documento_tipo_id', '5');
+    }
+    public function scopeTpMovimento($query)
+    {
+        return $query->where('documento_tipo_id', '6');
+    }
+
     /**
      * RELACIONAMENTO: O Documento 'pertence a um' DocumentoTipo. 
      * Obtenha esse registro.
