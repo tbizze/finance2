@@ -29,7 +29,7 @@ class DocumentoSeeder extends Seeder
         //
         //$eventos = Documento::factory(100)->create();
         // TODO: Restaurar conforme implementado. qde_documentos e data_início.
-        $qde_documentos = 30; // Qde de documentos a criar.
+        $qde_documentos = 3000; // Qde de documentos a criar.
         $qde_documento_tipos = 6; // Qde de documentos a criar.
         $this->data_inicio = '2023-01-01';  // Faz calculo a partir da data atual: '-5 month' / '-2 year' / '-5 days'...  /// Data exata '2022-01-01'.
         $this->data_fim = '2023-11-30';  // Faz calculo a partir da data atual: '+3 month' / '+2 year' / '+5 days'...  /// Data exata '2024-12-31'.

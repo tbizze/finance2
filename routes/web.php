@@ -66,7 +66,8 @@ Route::get('/dre-resumo2', [HomeController::class, 'dreResumo2'])->name('dre.res
 Route::get('/dre-resumo3', [HomeController::class, 'dreResumo3'])->name('dre.resumo');
 
 Route::get('/dre-1', [DreController::class, 'dreAnual']);
-Route::get('/dre-2', [DreController::class, 'index']);
+Route::get('/dre-2', [DreController::class, 'anual'])->name('dre.anual2');
+Route::get('/dre-3', [DreController::class, 'anualSum'])->name('dre.anual.sum');
 
 Route::get('/dre-resumo-mensal', [HomeTestController::class, 'dreResumoMensal'])->name('dre.resumo-mensal');
 Route::get('/dre-resumo-anual', [HomeTestController::class, 'dreResumoAnual'])->name('dre.resumo-anual');

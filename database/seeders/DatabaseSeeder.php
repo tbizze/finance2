@@ -37,11 +37,11 @@ class DatabaseSeeder extends Seeder
             PessoaSeeder::class,
             CtaMovimentoSeeder::class,  */
 
-            // DocumentoSeeder::class,
-            // DocumentoItemSeeder::class,
-            // DocumentoBaixaSeeder::class,
+            DocumentoSeeder::class,
+            DocumentoItemSeeder::class,
+            DocumentoBaixaSeeder::class,
 
-            JobcardSeeder::class,
+            //JobcardSeeder::class,
 
         ]);
     }
